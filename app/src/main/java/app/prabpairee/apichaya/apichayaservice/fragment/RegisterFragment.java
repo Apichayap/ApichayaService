@@ -7,6 +7,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import app.prabpairee.apichaya.apichayaservice.MainActivity;
 import app.prabpairee.apichaya.apichayaservice.R;
@@ -17,6 +18,10 @@ import app.prabpairee.apichaya.apichayaservice.R;
 
 public class RegisterFragment extends Fragment{
 
+//    Explicit
+    private String nameString, userString, passwordString;
+
+
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
@@ -25,8 +30,24 @@ public class RegisterFragment extends Fragment{
 
         createToolbar();
 
+//        Save Controller
+        saveController();
+
 
     }   // Main Method
+
+    private void saveController() {
+        ImageView imageView = getView().findViewById(R.id.imvSave);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+
+
+            }
+        });
+    }
 
     private void createToolbar() {
         Toolbar toolbar = getView().findViewById(R.id.toolbarRegister);
